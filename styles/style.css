@@ -63,7 +63,7 @@ top blog styles
     /* display: flex; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: 26px;
+    grid-row-gap: 26px; 
 }
 .blog{
     display: flex;
@@ -140,19 +140,35 @@ courses styles
  Media Queries 
  ------------*/
  /* Mobile Devices  */
-@media only screen and (max-width:688px){
+@media only screen and (max-width: 688px){
     .container{
         width: 100%;
     }
-    .players{
-        /* background-color: teal; */
-        grid-template-columns: repeat(1, 1fr);
+    .players, .blogs, .courses{
+        /* background-color: teal;  */
+        grid-template-columns: repeat(1, 1fr); 
+        
 
     }
-    .player{
+    .player, .blog{
         flex-direction: column;
-    }
-    .blogs, .courses{
-        display: none;
     } 
+    /* .blogs, .courses{
+        display: none;
+    }   */
+}
+/* tablet devices */
+@media only screen and (min-width: 688px) and (max-width:992px) {
+    .container{
+        width: 100%;
+    }
+    .players, .courses{
+        /* background-color: violet ; */
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .blogs{
+        grid-template-columns: repeat(1, 1fr); 
+    }
+    
+    
 }
